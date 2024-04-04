@@ -10,80 +10,42 @@ header {
   padding: 20px 0;
   border-bottom: 2px solid #ffffff; /* Tambahkan garis bawah pada header */
 }
-
-@font-face {
-  font-family: "Azonix";
-  src: url("Font/Azonix.ttf") format("truetype"); /* Sesuaikan path dengan lokasi font di proyek Anda */
-}
+/* Tambahkan di bawah CSS yang sudah ada */
 
 .hyper-tix {
-  font-family: "Azonix", sans-serif;
-  font-size: 50px;
-  text-align: center;
+  font-size: 50px; /* Atur ukuran huruf sesuai kebutuhan */
+  text-align: center; /* Tengahkan teks */
   margin: 0;
   padding: 0;
-  position: relative;
-  left: 450px;
-  display: inline-block;
-  overflow: hidden;
-  color: #000000; /* Warna utama TikTok */
-  transition: color 0.3s;
 }
 
-.hyper-tix::before,
-.hyper-tix::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+h1:hover {
+  color: #31363f;
+  text-shadow: 4px 4px 1px #fff;
+  transition: 0.2s;
 }
 
-.hyper-tix::before {
-  left: 2px;
-  text-shadow: -2px 0 #ff0000; /* Warna sekunder TikTok */
-  clip: rect(44px, 450px, 56px, 0);
-  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+.header-content {
+  flex-grow: 1; /* Header content mengisi sisa ruang yang tersedia */
 }
 
-.hyper-tix::after {
-  left: -2px;
-  text-shadow: -2px 0 #00c7ff; /* Warna sekunder TikTok */
-  clip: rect(24px, 450px, 36px, 0);
-  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+.header-content h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-@keyframes glitch-anim-1 {
-  0%,
-  100% {
-    clip: rect(44px, 9999px, 56px, 0);
-  }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    clip: rect(25px, 9999px, 62px, 0);
-  }
+.header-content p {
+  margin: 5px 0;
+  color: #fff;
 }
-
-@keyframes glitch-anim-2 {
-  0%,
-  100% {
-    clip: rect(24px, 9999px, 36px, 0);
-  }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    clip: rect(14px, 9999px, 74px, 0);
-  }
-}
-
-.hyper-tix:hover {
-  color: #ffffff; /* Warna hitam untuk efek glitch saat hover */
+nav {
+  display: flex;
+  justify-content: space-between; /* Menjadikan elemen di dalamnya berada di sisi-sisi yang berlawanan */
+  align-items: center;
+  background-color: #76abae;
+  padding: 20px 0;
+  border-bottom: 2px solid #ffffff;
 }
 
 .nav-links {
@@ -99,10 +61,6 @@ header {
 .nav-links a {
   color: #fff;
   text-decoration: none;
-}
-.nav-links a:hover {
-  color: #222831;
-  transition: 0.2s;
 }
 .container {
   max-width: 800px;
@@ -150,8 +108,8 @@ button {
 button:hover {
   background-color: #555;
 }
-.back {
-  float: right;
+.back{
+    float: right;
 }
 
 footer {
